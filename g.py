@@ -1,9 +1,13 @@
 import random
-answer = random.randint(1, 100)
+start = input('請決定隨機數字範圍開始值: ')
+end = input('請決定隨機數字範圍結束值: ')
+start = int(start)
+end = int(end)
+answer = random.randint(start, end)
 count = 0
 while True:
     count = count + 1
-    guess = input('請猜1~100其中一數: ')
+    guess = input('請猜數字: ')
     guess = int(guess)
     if guess == answer:
         print('你猜中了!')
